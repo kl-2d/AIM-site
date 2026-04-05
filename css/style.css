@@ -111,8 +111,8 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 17px;
+  line-height: 1.7;
   color: var(--text);
   background: var(--white);
 }
@@ -137,7 +137,7 @@ a:hover { color: var(--brown); }
   padding: 12px 28px;
   border-radius: var(--radius);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.2s;
   border: 2px solid transparent;
@@ -147,8 +147,8 @@ a:hover { color: var(--brown); }
 .btn--primary:hover { background: var(--dark); border-color: var(--dark); color: var(--white); }
 .btn--outline { background: transparent; color: var(--brown); border-color: var(--brown); }
 .btn--outline:hover { background: var(--brown); color: var(--white); }
-.btn--sm { padding: 8px 18px; font-size: 14px; }
-.btn--lg { padding: 16px 40px; font-size: 17px; }
+.btn--sm { padding: 8px 18px; font-size: 15px; }
+.btn--lg { padding: 16px 40px; font-size: 19px; }
 
 /* ── Nav ──────────────────────────────────────────────── */
 .nav {
@@ -176,7 +176,7 @@ a:hover { color: var(--brown); }
 }
 
 .nav__links { display: flex; gap: 28px; list-style: none; align-items: center; }
-.nav__links a { font-size: 14px; font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
+.nav__links a { font-size: 15px; font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
 .nav__links a:hover { color: var(--brown); }
 
 /* ── Hero ─────────────────────────────────────────────── */
@@ -216,7 +216,7 @@ a:hover { color: var(--brown); }
 
 .hero__title {
   font-family: var(--font-mono);
-  font-size: 52px;
+  font-size: 56px;
   font-weight: 600;
   color: var(--brown);
   letter-spacing: 0.05em;
@@ -224,7 +224,7 @@ a:hover { color: var(--brown); }
 }
 
 .hero__sub {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--brown-mid);
   letter-spacing: 0.15em;
@@ -232,9 +232,9 @@ a:hover { color: var(--brown); }
 }
 
 .hero__desc {
-  font-size: 18px;
+  font-size: 19px;
   color: var(--text);
-  max-width: 520px;
+  max-width: 560px;
   line-height: 1.6;
 }
 
@@ -242,7 +242,7 @@ a:hover { color: var(--brown); }
 .hero__version { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
 
 /* ── Section Titles ───────────────────────────────────── */
-.section__title { font-size: 30px; font-weight: 600; color: var(--brown); margin-bottom: 20px; }
+.section__title { font-size: 32px; font-weight: 600; color: var(--brown); margin-bottom: 20px; }
 .section__title--center { text-align: center; }
 .section__sub { text-align: center; color: var(--text-muted); max-width: 560px; margin: 0 auto 40px; }
 
@@ -275,8 +275,8 @@ a:hover { color: var(--brown); }
 
 .feature-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(42,31,18,0.14); }
 .feature-card__icon { font-size: 28px; margin-bottom: 12px; }
-.feature-card h3 { font-size: 16px; font-weight: 600; color: var(--brown); margin-bottom: 8px; }
-.feature-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.feature-card h3 { font-size: 17px; font-weight: 600; color: var(--brown); margin-bottom: 8px; }
+.feature-card p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
 
 /* ── Screenshots ──────────────────────────────────────── */
 .screenshots__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
@@ -308,7 +308,7 @@ a:hover { color: var(--brown); }
 .faq__item summary {
   padding: 18px 20px;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--brown);
   cursor: pointer;
   list-style: none;
@@ -321,7 +321,7 @@ a:hover { color: var(--brown); }
 .faq__item summary::-webkit-details-marker { display: none; }
 .faq__item summary::after { content: '+'; font-size: 20px; font-weight: 400; color: var(--brown-light); transition: transform 0.2s; }
 .faq__item[open] summary::after { transform: rotate(45deg); }
-.faq__item p { padding: 0 20px 18px; font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+.faq__item p { padding: 0 20px 18px; font-size: 15px; color: var(--text-muted); line-height: 1.65; }
 
 /* ── Changelog ────────────────────────────────────────── */
 .changelog__list { max-width: 720px; margin: 40px auto 0; }
@@ -349,7 +349,7 @@ a:hover { color: var(--brown); }
 .changelog__changes { list-style: none; display: flex; flex-direction: column; gap: 8px; }
 
 .changelog__changes li {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-muted);
   padding-left: 20px;
   position: relative;
@@ -381,8 +381,8 @@ a:hover { color: var(--brown); }
   letter-spacing: 0.08em;
 }
 
-.roadmap__item h3 { font-size: 15px; font-weight: 600; color: var(--brown); margin-bottom: 8px; }
-.roadmap__item p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+.roadmap__item h3 { font-size: 16px; font-weight: 600; color: var(--brown); margin-bottom: 8px; }
+.roadmap__item p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
 /* ── Screenshots (real) ───────────────────────────────── */
 .screenshots__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
@@ -485,14 +485,14 @@ a:hover { color: var(--brown); }
 
 .page-hero__title {
   font-family: var(--font-mono);
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 600;
   color: var(--brown);
   margin-bottom: 8px;
 }
 
 .page-hero__sub {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--text-muted);
 }
 
@@ -524,7 +524,7 @@ a:hover { color: var(--brown); }
 }
 
 .screenshot-feature__text h2 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--brown);
   margin-bottom: 12px;
@@ -532,7 +532,7 @@ a:hover { color: var(--brown); }
 
 .screenshot-feature__text p {
   color: var(--text-muted);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
   margin-bottom: 10px;
 }
@@ -609,7 +609,7 @@ a:hover { color: var(--brown); }
 }
 
 .download-card__header h2 {
-  font-size: 22px;
+  font-size: 24px;
   color: var(--brown);
   margin-bottom: 4px;
 }
@@ -669,14 +669,14 @@ a:hover { color: var(--brown); }
 }
 
 .step h3 {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--brown);
   margin-bottom: 8px;
 }
 
 .step p {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-muted);
   line-height: 1.6;
 }
