@@ -464,6 +464,223 @@ a:hover { color: var(--brown); }
 .download p { color: var(--text-muted); }
 .download__meta { font-size: 13px; color: var(--text-muted); margin-top: -8px; }
 
+/* ── Page Hero (inner pages) ──────────────────────────── */
+.page-hero {
+  background: var(--sand);
+  padding: 56px 0 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/bg-pattern.jpg');
+  background-size: cover;
+  opacity: 0.2;
+}
+
+.page-hero .container { position: relative; z-index: 1; }
+
+.page-hero__title {
+  font-family: var(--font-mono);
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--brown);
+  margin-bottom: 8px;
+}
+
+.page-hero__sub {
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* ── Nav active ───────────────────────────────────────── */
+.nav__active { color: var(--brown) !important; font-weight: 600 !important; }
+
+/* ── Features grid variants ───────────────────────────── */
+.features__grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+/* ── Screenshot feature (alternating) ────────────────── */
+.screenshot-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.screenshot-feature:last-child { margin-bottom: 0; }
+
+.screenshot-feature--reverse .screenshot-feature__img { order: 2; }
+.screenshot-feature--reverse .screenshot-feature__text { order: 1; }
+
+.screenshot-feature__img img {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+
+.screenshot-feature__text h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--brown);
+  margin-bottom: 12px;
+}
+
+.screenshot-feature__text p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* ── Changelog badge ──────────────────────────────────── */
+.changelog__item--current {
+  border-color: var(--brown-mid);
+}
+
+.changelog__badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--brown-mid);
+  padding: 3px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── Roadmap collab CTA ───────────────────────────────── */
+.collab-cta {
+  margin-top: 60px;
+  padding: 40px;
+  background: var(--sand-light);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.collab-cta h2 {
+  font-size: 24px;
+  color: var(--brown);
+  margin-bottom: 12px;
+}
+
+.collab-cta p {
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto 24px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.collab-cta__actions { display: flex; gap: 12px; justify-content: center; }
+
+/* ── Download card ────────────────────────────────────── */
+.download-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 2px solid var(--brown-mid);
+  border-radius: var(--radius);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.download-card__header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.download-card__logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+}
+
+.download-card__header h2 {
+  font-size: 22px;
+  color: var(--brown);
+  margin-bottom: 4px;
+}
+
+.download-card__meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.download-card__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.download-card__features li {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.download-card__note {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ── Steps ────────────────────────────────────────────── */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.step {
+  text-align: center;
+  padding: 28px 20px;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.step__num {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  background: var(--brown);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.step h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brown);
+  margin-bottom: 8px;
+}
+
+.step p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 /* ── Footer ───────────────────────────────────────────── */
 .footer { background: var(--dark); padding: 40px 0; }
 .footer__inner { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
@@ -476,8 +693,14 @@ a:hover { color: var(--brown); }
 @media (max-width: 900px) {
   .about__grid,
   .features__grid,
+  .features__grid--3,
   .roadmap__grid,
-  .collab__grid { grid-template-columns: 1fr 1fr; }
+  .collab__grid,
+  .steps,
+  .screenshot-feature { grid-template-columns: 1fr 1fr; }
+
+  .screenshot-feature--reverse .screenshot-feature__img { order: 0; }
+  .screenshot-feature--reverse .screenshot-feature__text { order: 0; }
 }
 
 @media (max-width: 600px) {
@@ -486,9 +709,14 @@ a:hover { color: var(--brown); }
   .hero__actions { flex-direction: column; }
   .about__grid,
   .features__grid,
+  .features__grid--3,
   .roadmap__grid,
   .screenshots__grid,
-  .collab__grid { grid-template-columns: 1fr; }
+  .collab__grid,
+  .steps,
+  .screenshot-feature { grid-template-columns: 1fr; }
+  .collab-cta__actions { flex-direction: column; align-items: center; }
+  .download-card { padding: 24px; }
 }
 
 @media (max-width: 600px) {
