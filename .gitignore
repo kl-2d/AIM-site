@@ -1,6 +1,32 @@
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-# Useful .gitignore templates: https://github.com/github/gitignore
-node_modules
-dist
-.cache
+# Dependencies
+node_modules/
+dist/
+.cache/
+
+# IDE
+.idea/
+*.iml
+
+# Archives (except the release file for download)
+*.zip
+*.7z
+*.tar.gz
+
+# Extracted folders
+AIM Облако/
+Release AIM v0.1 29-03-2026/
+
+# Design materials
+Презентация*.pptx
+*.pptx
+
+# Webpack / build
+webpack.*.js
+package.json
+package-lock.json
+style.css
+js/
+
+# Editor
+.editorconfig
+.gitattributes
