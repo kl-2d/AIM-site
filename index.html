@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AIM — Archaeological Inventory Maker</title>
+  <meta name="description" content="AIM — программа для создания и ведения археологических описей. Импорт CSV, валидация данных, гибкая фильтрация, экспорт отчётов.">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">[AIM]</a>
+      <ul class="nav__links">
+        <li><a href="#features">Возможности</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+        <li><a href="#roadmap">Планы</a></li>
+        <li><a href="#download" class="btn btn--sm">Скачать</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__inner">
+      <img src="img/logo.jpg" alt="AIM логотип" class="hero__logo">
+      <h1 class="hero__title">[AIM]</h1>
+      <p class="hero__sub">Archaeological Inventory Maker</p>
+      <p class="hero__desc">Программа для создания и ведения цифровых описей<br>артефактов археологических раскопок</p>
+      <div class="hero__actions">
+        <a href="#download" class="btn btn--primary">Скачать v0.1</a>
+        <a href="#features" class="btn btn--outline">Узнать больше</a>
+      </div>
+      <p class="hero__version">Версия 0.1 · 29 марта 2026 · Windows</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text">
+          <h2 class="section__title">Что такое AIM?</h2>
+          <p>AIM — настольная программа для археологов, которая помогает вести структурированные описи найденных артефактов прямо в поле или в лаборатории.</p>
+          <p>Вместо разрозненных таблиц Excel — единый инструмент с валидацией данных, гибкой фильтрацией и генерацией отчётов. Поддерживает работу с большими объёмами: до миллиона записей без потери скорости.</p>
+        </div>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__num">1 000 000+</span>
+            <span class="stat__label">записей без потери скорости</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">7</span>
+            <span class="stat__label">типов данных для колонок</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">CSV → DOCX</span>
+            <span class="stat__label">импорт и экспорт отчётов</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features section" id="features">
+    <div class="container">
+      <h2 class="section__title section__title--center">Возможности</h2>
+      <div class="features__grid">
+
+        <div class="feature-card">
+          <div class="feature-card__icon">📋</div>
+          <h3>Гибкая структура таблиц</h3>
+          <p>Создавайте таблицы с любым набором колонок. Семь типов данных: текст, число, дата, логическое значение, список и другие.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">✅</div>
+          <h3>Валидация данных</h3>
+          <p>Встроенная проверка на ошибки при вводе. Программа сразу показывает какие записи некорректны и почему.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🔍</div>
+          <h3>Мощная фильтрация</h3>
+          <p>Фильтруйте по любым полям — текст, диапазоны чисел, даты, списки значений. Сохраняйте фильтры для повторного использования.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">📥</div>
+          <h3>Импорт CSV</h3>
+          <p>Загружайте данные из CSV-файлов. Гибкое сопоставление колонок файла с колонками таблицы.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">📄</div>
+          <h3>Экспорт отчётов</h3>
+          <p>Генерация готовых отчётов в формате Word (DOCX) с данными о раскопках: исследователь, памятник, дата, номер открытого листа.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">💾</div>
+          <h3>Сессии работы</h3>
+          <p>Сохраняйте и открывайте рабочие сессии. Конфигурация таблицы и данные хранятся в удобном формате.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="screenshots section section--dark" id="screenshots">
+    <div class="container">
+      <h2 class="section__title section__title--center">Интерфейс</h2>
+      <div class="screenshots__grid">
+        <div class="screenshot-placeholder">
+          <span>Главное окно программы</span>
+        </div>
+        <div class="screenshot-placeholder">
+          <span>Панель фильтров</span>
+        </div>
+        <div class="screenshot-placeholder">
+          <span>Настройка структуры таблицы</span>
+        </div>
+      </div>
+      <p class="screenshots__note">← Добавь скриншоты программы</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <h2 class="section__title section__title--center">FAQ</h2>
+      <div class="faq__list">
+
+        <details class="faq__item">
+          <summary>Для кого эта программа?</summary>
+          <p>AIM предназначена для археологов и исследователей, которые ведут полевые описи артефактов. Программа подойдёт как для небольших раскопок, так и для крупных экспедиций с большим объёмом данных.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Какие операционные системы поддерживаются?</summary>
+          <p>На данный момент — Windows. Поддержка Linux и macOS планируется в будущих версиях.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Нужен ли интернет для работы?</summary>
+          <p>Нет. AIM работает полностью офлайн — это важно для полевых условий.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Можно ли импортировать данные из Excel?</summary>
+          <p>Сохраните таблицу Excel как CSV и импортируйте в AIM. Прямой импорт XLSX планируется в следующих версиях.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Сколько записей поддерживает программа?</summary>
+          <p>AIM протестирован на таблицах с 1 000 000 записей. Для большинства задач производительность будет достаточной.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Программа бесплатная?</summary>
+          <p>Да, AIM полностью бесплатна.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANGELOG -->
+  <section class="changelog section section--dark" id="changelog">
+    <div class="container">
+      <h2 class="section__title section__title--center">Changelog</h2>
+      <div class="changelog__list">
+
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <span class="changelog__version">v0.1</span>
+            <span class="changelog__date">29 марта 2026</span>
+          </div>
+          <ul class="changelog__changes">
+            <li>Создание таблиц с произвольной структурой колонок</li>
+            <li>7 типов данных: текст, целое число, число с индексом, число с точкой, логическое, дата, список</li>
+            <li>Импорт данных из CSV</li>
+            <li>Экспорт в CSV и отчёт DOCX</li>
+            <li>Панель фильтров с сохранением и загрузкой</li>
+            <li>Валидация данных с подробными ошибками</li>
+            <li>Сессии работы</li>
+            <li>Русский интерфейс</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="roadmap section" id="roadmap">
+    <div class="container">
+      <h2 class="section__title section__title--center">Что планируем разработать</h2>
+      <p class="section__sub">AIM активно развивается. Вот что готовится в следующих версиях:</p>
+      <div class="roadmap__grid">
+
+        <div class="roadmap__item">
+          <span class="roadmap__tag">v0.2</span>
+          <h3>Прямой импорт XLSX</h3>
+          <p>Импорт данных напрямую из файлов Microsoft Excel без конвертации в CSV.</p>
+        </div>
+
+        <div class="roadmap__item">
+          <span class="roadmap__tag">v0.2</span>
+          <h3>Фотографии артефактов</h3>
+          <p>Прикрепление фотографий к записям описи прямо внутри программы.</p>
+        </div>
+
+        <div class="roadmap__item">
+          <span class="roadmap__tag">v0.3</span>
+          <h3>Linux и macOS</h3>
+          <p>Поддержка дополнительных операционных систем для работы на любом оборудовании.</p>
+        </div>
+
+        <div class="roadmap__item">
+          <span class="roadmap__tag">v0.3</span>
+          <h3>Шаблоны таблиц</h3>
+          <p>Готовые шаблоны для типовых видов описей: индивидуальные находки, нивелировка, ортофото.</p>
+        </div>
+
+        <div class="roadmap__item">
+          <span class="roadmap__tag">будущее</span>
+          <h3>Совместная работа</h3>
+          <p>Одновременная работа нескольких исследователей над одной описью через локальную сеть.</p>
+        </div>
+
+        <div class="roadmap__item">
+          <span class="roadmap__tag">будущее</span>
+          <h3>Визуализация данных</h3>
+          <p>Графики и диаграммы по данным раскопок: распределение по слоям, материалам, квадратам.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="download section" id="download">
+    <div class="container download__inner">
+      <img src="img/logo.jpg" alt="AIM" class="download__logo">
+      <h2>Скачать AIM</h2>
+      <p>Бесплатно. Работает офлайн. Не требует установки.</p>
+      <a href="Release AIM v0.1 29-03-2026.rar" class="btn btn--primary btn--lg" download>
+        Скачать v0.1 для Windows
+      </a>
+      <p class="download__meta">RAR-архив · Windows · 29.03.2026</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="nav__logo">[AIM]</span>
+      <p>Archaeological Inventory Maker · 2026</p>
+      <p>Разработчик: <a href="mailto:Ahka2004@yandex.ru">Ahka2004@yandex.ru</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
