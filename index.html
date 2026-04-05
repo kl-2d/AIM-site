@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AIM — Archaeological Inventory Maker</title>
-  <meta name="description" content="AIM — программа для создания и ведения археологических описей. Импорт CSV, валидация данных, гибкая фильтрация, экспорт отчётов.">
+  <meta name="description" content="AIM — бесплатная программа для создания безошибочной, структурированной археологической описи. Работает без установки, даже с флешки.">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,7 @@
       <a href="#" class="nav__logo">[AIM]</a>
       <ul class="nav__links">
         <li><a href="#features">Возможности</a></li>
+        <li><a href="#screenshots">Интерфейс</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#changelog">Changelog</a></li>
         <li><a href="#roadmap">Планы</a></li>
@@ -37,12 +38,12 @@
       <img src="img/logo.jpg" alt="AIM логотип" class="hero__logo">
       <h1 class="hero__title">[AIM]</h1>
       <p class="hero__sub">Archaeological Inventory Maker</p>
-      <p class="hero__desc">Программа для создания и ведения цифровых описей<br>артефактов археологических раскопок</p>
+      <p class="hero__desc">Находки, таблицы, обмеры, списки, камеральные записи —<br>безошибочная, структурированная, единообразная опись</p>
       <div class="hero__actions">
         <a href="#download" class="btn btn--primary">Скачать v0.1</a>
         <a href="#features" class="btn btn--outline">Узнать больше</a>
       </div>
-      <p class="hero__version">Версия 0.1 · 29 марта 2026 · Windows</p>
+      <p class="hero__version">Версия 0.1 · 29 марта 2026 · Windows · Бесплатно</p>
     </div>
   </section>
 
@@ -52,21 +53,22 @@
       <div class="about__grid">
         <div class="about__text">
           <h2 class="section__title">Что такое AIM?</h2>
-          <p>AIM — настольная программа для археологов, которая помогает вести структурированные описи найденных артефактов прямо в поле или в лаборатории.</p>
-          <p>Вместо разрозненных таблиц Excel — единый инструмент с валидацией данных, гибкой фильтрацией и генерацией отчётов. Поддерживает работу с большими объёмами: до миллиона записей без потери скорости.</p>
+          <p>AIM — редактор описи находок в виде готового решения, учитывающего особенности составления археологических описей. Программа создаёт таблицу с контролем записей и учётом ошибок, исключая ошибки оператора.</p>
+          <p>Минимальный порог входа — не нужно ничего осваивать. Запускается мгновенно без установки, работает даже с флешки прямо на раскопе.</p>
+          <p>Волонтёрский проект, распространяется как freeware и рассчитан на широкое применение среди всех заинтересованных пользователей.</p>
         </div>
         <div class="about__stats">
+          <div class="stat">
+            <span class="stat__num">~60 МБ</span>
+            <span class="stat__label">без установки, работает с флешки</span>
+          </div>
           <div class="stat">
             <span class="stat__num">1 000 000+</span>
             <span class="stat__label">записей без потери скорости</span>
           </div>
           <div class="stat">
-            <span class="stat__num">7</span>
-            <span class="stat__label">типов данных для колонок</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">CSV → DOCX</span>
-            <span class="stat__label">импорт и экспорт отчётов</span>
+            <span class="stat__num">Freeware</span>
+            <span class="stat__label">бесплатно для всех</span>
           </div>
         </div>
       </div>
@@ -74,45 +76,63 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="features section" id="features">
+  <section class="features section section--dark" id="features">
     <div class="container">
       <h2 class="section__title section__title--center">Возможности</h2>
       <div class="features__grid">
 
         <div class="feature-card">
-          <div class="feature-card__icon">📋</div>
-          <h3>Гибкая структура таблиц</h3>
-          <p>Создавайте таблицы с любым набором колонок. Семь типов данных: текст, число, дата, логическое значение, список и другие.</p>
+          <div class="feature-card__icon">🏗️</div>
+          <h3>Конструктор таблицы</h3>
+          <p>Вы задаёте правила: какие типы значений допустимы, какой диапазон чисел, какие варианты из списка. В опись попадут только заданные значения.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">✅</div>
-          <h3>Валидация данных</h3>
-          <p>Встроенная проверка на ошибки при вводе. Программа сразу показывает какие записи некорректны и почему.</p>
+          <div class="feature-card__icon">🔴</div>
+          <h3>Подсветка ошибок</h3>
+          <p>Некорректные записи сразу выделяются с расшифровкой ошибки. Видно что именно не так и почему запись не прошла валидацию.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-card__icon">🔍</div>
-          <h3>Мощная фильтрация</h3>
-          <p>Фильтруйте по любым полям — текст, диапазоны чисел, даты, списки значений. Сохраняйте фильтры для повторного использования.</p>
+          <h3>Интуитивный фильтр</h3>
+          <p>Как в интернет-магазине — пользоваться сможет каждый. Фильтр можно сохранить и передать на другое рабочее место.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">📥</div>
-          <h3>Импорт CSV</h3>
-          <p>Загружайте данные из CSV-файлов. Гибкое сопоставление колонок файла с колонками таблицы.</p>
+          <div class="feature-card__icon">🏺</div>
+          <h3>Полевое кодирование</h3>
+          <p>Вводите сокращения прямо в поле — программа расшифровывает коды в полные названия. Например: Q → кварц, S → стекло.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-card__icon">📄</div>
-          <h3>Экспорт отчётов</h3>
-          <p>Генерация готовых отчётов в формате Word (DOCX) с данными о раскопках: исследователь, памятник, дата, номер открытого листа.</p>
+          <h3>Вывод в отчёт</h3>
+          <p>Значения таблицы передаются в нужную форму — коллекционную опись, полевой журнал или другой документ DOCX.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">📊</div>
+          <h3>Совместимость с CSV</h3>
+          <p>Импорт и экспорт в незакрытый формат CSV. Данные легко открыть в Excel или передать коллегам.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">📋</div>
+          <h3>Сводная информация</h3>
+          <p>Быстрая сводка по отображаемой описи: количество записей, количество ошибок — всегда на виду.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">⚡</div>
+          <h3>Мгновенный старт</h3>
+          <p>Не требует установки и специальных навыков. Распакуйте архив — и начинайте работу в течение нескольких минут.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-card__icon">💾</div>
           <h3>Сессии работы</h3>
-          <p>Сохраняйте и открывайте рабочие сессии. Конфигурация таблицы и данные хранятся в удобном формате.</p>
+          <p>Сохраняйте и открывайте рабочие сессии. Структура таблицы и данные хранятся вместе.</p>
         </div>
 
       </div>
@@ -120,58 +140,74 @@
   </section>
 
   <!-- SCREENSHOTS -->
-  <section class="screenshots section section--dark" id="screenshots">
+  <section class="screenshots section" id="screenshots">
     <div class="container">
       <h2 class="section__title section__title--center">Интерфейс</h2>
       <div class="screenshots__grid">
-        <div class="screenshot-placeholder">
-          <span>Главное окно программы</span>
+
+        <div class="screenshot">
+          <img src="img/screenshots/1.png" alt="Главное окно AIM — таблица, фильтры, подсветка ошибок">
+          <p class="screenshot__cap">Главное окно: таблица, панель фильтров, подсветка ошибочных записей</p>
         </div>
-        <div class="screenshot-placeholder">
-          <span>Панель фильтров</span>
+
+        <div class="screenshot">
+          <img src="img/screenshots/2.png" alt="Конструктор таблицы">
+          <p class="screenshot__cap">Конструктор таблицы — вы задаёте правила для каждого поля</p>
         </div>
-        <div class="screenshot-placeholder">
-          <span>Настройка структуры таблицы</span>
+
+        <div class="screenshot">
+          <img src="img/screenshots/3.png" alt="Интуитивный фильтр">
+          <p class="screenshot__cap">Интуитивный фильтр с возможностью сохранения и передачи</p>
         </div>
+
+        <div class="screenshot">
+          <img src="img/screenshots/4.png" alt="Вывод в отчёт">
+          <p class="screenshot__cap">Вывод данных в готовую форму — коллекционную опись</p>
+        </div>
+
       </div>
-      <p class="screenshots__note">← Добавь скриншоты программы</p>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq section" id="faq">
+  <section class="faq section section--dark" id="faq">
     <div class="container">
       <h2 class="section__title section__title--center">FAQ</h2>
       <div class="faq__list">
 
         <details class="faq__item">
           <summary>Для кого эта программа?</summary>
-          <p>AIM предназначена для археологов и исследователей, которые ведут полевые описи артефактов. Программа подойдёт как для небольших раскопок, так и для крупных экспедиций с большим объёмом данных.</p>
+          <p>AIM предназначена для археологов и исследователей, которые ведут полевые описи артефактов. Подойдёт как для небольших раскопок, так и для крупных экспедиций с большим объёмом данных.</p>
         </details>
 
         <details class="faq__item">
-          <summary>Какие операционные системы поддерживаются?</summary>
-          <p>На данный момент — Windows. Поддержка Linux и macOS планируется в будущих версиях.</p>
+          <summary>Нужно ли что-то устанавливать?</summary>
+          <p>Нет. AIM работает без установки — просто распакуйте архив и запустите. Размер программы около 60 МБ. Можно запускать прямо с флешки на любом рабочем месте.</p>
         </details>
 
         <details class="faq__item">
-          <summary>Нужен ли интернет для работы?</summary>
+          <summary>Нужен ли интернет?</summary>
           <p>Нет. AIM работает полностью офлайн — это важно для полевых условий.</p>
         </details>
 
         <details class="faq__item">
-          <summary>Можно ли импортировать данные из Excel?</summary>
-          <p>Сохраните таблицу Excel как CSV и импортируйте в AIM. Прямой импорт XLSX планируется в следующих версиях.</p>
+          <summary>Какие операционные системы поддерживаются?</summary>
+          <p>На данный момент — Windows. Поддержка других платформ планируется в будущих версиях.</p>
         </details>
 
         <details class="faq__item">
-          <summary>Сколько записей поддерживает программа?</summary>
-          <p>AIM протестирован на таблицах с 1 000 000 записей. Для большинства задач производительность будет достаточной.</p>
+          <summary>Можно ли работать с данными из Excel?</summary>
+          <p>Да. Сохраните таблицу Excel как CSV и импортируйте в AIM. Экспортированные данные также открываются в Excel. Прямой импорт XLSX планируется в следующих версиях.</p>
         </details>
 
         <details class="faq__item">
           <summary>Программа бесплатная?</summary>
-          <p>Да, AIM полностью бесплатна.</p>
+          <p>Да, AIM полностью бесплатна и распространяется как freeware. Если хотите поддержать развитие — смотрите раздел ниже.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Как передать настройки фильтра коллеге?</summary>
+          <p>Сохраните фильтр в файл и передайте его — коллега загрузит его в свою копию программы. Фильтры хранятся в виде обычных JSON-файлов.</p>
         </details>
 
       </div>
@@ -179,7 +215,7 @@
   </section>
 
   <!-- CHANGELOG -->
-  <section class="changelog section section--dark" id="changelog">
+  <section class="changelog section" id="changelog">
     <div class="container">
       <h2 class="section__title section__title--center">Changelog</h2>
       <div class="changelog__list">
@@ -190,14 +226,17 @@
             <span class="changelog__date">29 марта 2026</span>
           </div>
           <ul class="changelog__changes">
-            <li>Создание таблиц с произвольной структурой колонок</li>
-            <li>7 типов данных: текст, целое число, число с индексом, число с точкой, логическое, дата, список</li>
+            <li>Конструктор таблицы — задавайте свои правила для каждого поля</li>
+            <li>7 типов данных: текст, целое число, число с индексом, дробное, логическое, дата, список</li>
+            <li>Подсветка ошибочных записей с расшифровкой ошибки</li>
+            <li>Интуитивный фильтр с сохранением и загрузкой</li>
+            <li>Полевое кодирование — расшифровка сокращений</li>
             <li>Импорт данных из CSV</li>
             <li>Экспорт в CSV и отчёт DOCX</li>
-            <li>Панель фильтров с сохранением и загрузкой</li>
-            <li>Валидация данных с подробными ошибками</li>
+            <li>Быстрая сводка по отображаемым записям</li>
             <li>Сессии работы</li>
             <li>Русский интерфейс</li>
+            <li>Работа без установки, ~60 МБ</li>
           </ul>
         </div>
 
@@ -206,46 +245,46 @@
   </section>
 
   <!-- ROADMAP -->
-  <section class="roadmap section" id="roadmap">
+  <section class="roadmap section section--dark" id="roadmap">
     <div class="container">
       <h2 class="section__title section__title--center">Что планируем разработать</h2>
       <p class="section__sub">AIM активно развивается. Вот что готовится в следующих версиях:</p>
       <div class="roadmap__grid">
 
         <div class="roadmap__item">
-          <span class="roadmap__tag">v0.2</span>
-          <h3>Прямой импорт XLSX</h3>
-          <p>Импорт данных напрямую из файлов Microsoft Excel без конвертации в CSV.</p>
+          <span class="roadmap__tag">в планах</span>
+          <h3>Множественные таблицы</h3>
+          <p>Несколько таблиц в одной сессии со сквозным фильтром между ними.</p>
         </div>
 
         <div class="roadmap__item">
-          <span class="roadmap__tag">v0.2</span>
-          <h3>Фотографии артефактов</h3>
-          <p>Прикрепление фотографий к записям описи прямо внутри программы.</p>
+          <span class="roadmap__tag">в планах</span>
+          <h3>Генератор этикеток</h3>
+          <p>Автоматическое создание этикеток для артефактов из данных активной таблицы.</p>
         </div>
 
         <div class="roadmap__item">
-          <span class="roadmap__tag">v0.3</span>
-          <h3>Linux и macOS</h3>
-          <p>Поддержка дополнительных операционных систем для работы на любом оборудовании.</p>
+          <span class="roadmap__tag">в планах</span>
+          <h3>Расширенная работа с данными</h3>
+          <p>Выпадающие списки, сниппеты, подсказки, групповой ввод, горячие клавиши.</p>
         </div>
 
         <div class="roadmap__item">
-          <span class="roadmap__tag">v0.3</span>
-          <h3>Шаблоны таблиц</h3>
-          <p>Готовые шаблоны для типовых видов описей: индивидуальные находки, нивелировка, ортофото.</p>
+          <span class="roadmap__tag">в планах</span>
+          <h3>Экспорт структуры таблицы</h3>
+          <p>Выгружаемое описание структуры и правил таблицы для документирования и передачи.</p>
         </div>
 
         <div class="roadmap__item">
-          <span class="roadmap__tag">будущее</span>
+          <span class="roadmap__tag">в планах</span>
+          <h3>Расширение типов данных</h3>
+          <p>Новые специализированные типы и конструктор собственного типа данных.</p>
+        </div>
+
+        <div class="roadmap__item">
+          <span class="roadmap__tag">в планах</span>
           <h3>Совместная работа</h3>
-          <p>Одновременная работа нескольких исследователей над одной описью через локальную сеть.</p>
-        </div>
-
-        <div class="roadmap__item">
-          <span class="roadmap__tag">будущее</span>
-          <h3>Визуализация данных</h3>
-          <p>Графики и диаграммы по данным раскопок: распределение по слоям, материалам, квадратам.</p>
+          <p>Одновременная работа нескольких исследователей над одной описью через сервер.</p>
         </div>
 
       </div>
@@ -257,11 +296,38 @@
     <div class="container download__inner">
       <img src="img/logo.jpg" alt="AIM" class="download__logo">
       <h2>Скачать AIM</h2>
-      <p>Бесплатно. Работает офлайн. Не требует установки.</p>
+      <p>Бесплатно. Без установки. Работает с флешки.</p>
       <a href="Release AIM v0.1 29-03-2026.rar" class="btn btn--primary btn--lg" download>
         Скачать v0.1 для Windows
       </a>
-      <p class="download__meta">RAR-архив · Windows · 29.03.2026</p>
+      <p class="download__meta">RAR-архив · ~60 МБ · Windows · 29.03.2026</p>
+    </div>
+  </section>
+
+  <!-- COLLAB -->
+  <section class="collab section section--dark">
+    <div class="container collab__inner">
+      <h2 class="section__title section__title--center">Присоединиться к проекту</h2>
+      <p class="section__sub">AIM — волонтёрский проект. Ищем коллаборацию для дальнейшего развития возможностей программы.</p>
+      <div class="collab__grid">
+        <div class="collab__card">
+          <h3>Обратная связь</h3>
+          <p>Пользуетесь программой? Расскажите что работает хорошо, что неудобно, чего не хватает.</p>
+        </div>
+        <div class="collab__card">
+          <h3>Поддержать разработку</h3>
+          <p>Если программа оказалась полезной — вы можете ускорить разработку новых версий.</p>
+          <p class="collab__donate">Карта Сбер МИР:<br><strong>+7 (952) 207-77-29</strong> (Марунин М.В.)</p>
+        </div>
+        <div class="collab__card">
+          <h3>Связаться с разработчиком</h3>
+          <p>Есть идеи, предложения или хотите помочь с разработкой?</p>
+          <div class="collab__contacts">
+            <a href="mailto:Ahka2004@yandex.ru">✉ Ahka2004@yandex.ru</a>
+            <a href="https://t.me/MaxBurger2000" target="_blank">✈ Telegram: @MaxBurger2000</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -270,7 +336,11 @@
     <div class="container footer__inner">
       <span class="nav__logo">[AIM]</span>
       <p>Archaeological Inventory Maker · 2026</p>
-      <p>Разработчик: <a href="mailto:Ahka2004@yandex.ru">Ahka2004@yandex.ru</a></p>
+      <p>
+        <a href="mailto:Ahka2004@yandex.ru">Ahka2004@yandex.ru</a>
+        &nbsp;·&nbsp;
+        <a href="https://t.me/MaxBurger2000" target="_blank">Telegram</a>
+      </p>
     </div>
   </footer>
 
