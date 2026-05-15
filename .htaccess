@@ -1,0 +1,22 @@
+RewriteEngine On
+
+# 1. Редирект HTTP → HTTPS (с защитой от циклов на shared-хостинге)
+RewriteCond %{SERVER_PORT} !^443$
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# 2. Редирект /index.html и /index → / (главная)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+index(\.html)?\ HTTP/ [NC]
+RewriteRule ^index(\.html)?$ / [R=301,L]
+
+# 3. Редирект /page.html → /page (убираем .html из адресной строки)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+([^.]+)\.html\ HTTP/ [NC]
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+
+# 4. Внутренний маппинг: /page → /page.html (для отдачи реального файла)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# 5. Кастомная страница 404
+ErrorDocument 404 /404.html

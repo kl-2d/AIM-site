@@ -3,9 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FAQ — AIM · aim-app.ru</title>
+  <title>FAQ — AIM</title>
   <meta name="description" content="Частые вопросы об AIM — для кого программа, как установить, какие системы поддерживаются.">
+  <link rel="canonical" href="https://aimarcheo.ru/faq">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="AIM — Archaeological Inventory Maker">
+  <meta property="og:title" content="FAQ — AIM">
+  <meta property="og:description" content="Частые вопросы об AIM — для кого программа, как установить, какие системы поддерживаются.">
+  <meta property="og:url" content="https://aimarcheo.ru/faq">
+  <meta property="og:image" content="https://aimarcheo.ru/img/logo.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FAQ — AIM">
+  <meta name="twitter:description" content="Частые вопросы об AIM — для кого программа, как установить, какие системы поддерживаются.">
+  <meta name="twitter:image" content="https://aimarcheo.ru/img/logo.jpg">
   <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -16,14 +33,15 @@
 
   <nav class="nav">
     <div class="container nav__inner">
-      <a href="index.html" class="nav__logo">[AIM]</a>
+      <a href="/" class="nav__logo">[AIM]</a>
       <ul class="nav__links">
-        <li><a href="features.html">Возможности</a></li>
-        <li><a href="screenshots.html">Интерфейс</a></li>
-        <li><a href="faq.html" class="nav__active">FAQ</a></li>
-        <li><a href="changelog.html">Changelog</a></li>
-        <li><a href="roadmap.html">Планы</a></li>
-        <li><a href="download.html" class="btn btn--sm">Скачать</a></li>
+        <li><a href="/download" class="btn btn--sm btn--cta">Скачать</a></li>
+        <li><a href="/features">Возможности</a></li>
+        <li><a href="/screenshots">Интерфейс</a></li>
+        <li><a href="/faq" class="nav__active">FAQ</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/roadmap">Планы</a></li>
+        <li><a href="/team">Команда</a></li>
       </ul>
       <button class="nav__burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -39,6 +57,13 @@
   <section class="section">
     <div class="container">
       <div class="faq__list">
+
+        <details class="faq__item">
+          <summary>Чем AIM отличается от Excel, Access, ГИС, базы данных и т.д.?</summary>
+          <p>AIM — это готовое решение для заполнения археологической таблицы. Программа имеет простой интерфейс и не требует специальных навыков.</p>
+          <p>Позволяет быстро организовать безошибочный, единообразный, контролируемый процесс ведения таблицы по заданным вами правилам.</p>
+          <p>Её разработка преследует цель организовать как можно более удобно процесс сбора данных для самого широкого круга пользователей. Возможно, это первая такая разработка на территории России, которая доведена до готовности.</p>
+        </details>
 
         <details class="faq__item">
           <summary>Для кого эта программа?</summary>
@@ -100,18 +125,19 @@
         <div class="footer__brand">
           <span class="nav__logo">[AIM]</span>
           <p>Archaeological Inventory Maker</p>
-          <p>Бесплатная программа для создания<br>археологических описей</p>
+          <p>Бесплатная программа для создания<br>археологических таблиц</p>
         </div>
         <div class="footer__nav">
           <h4>Навигация</h4>
           <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="features.html">Возможности</a></li>
-            <li><a href="screenshots.html">Интерфейс</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="changelog.html">Changelog</a></li>
-            <li><a href="roadmap.html">Планы</a></li>
-            <li><a href="download.html">Скачать</a></li>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/features">Возможности</a></li>
+            <li><a href="/screenshots">Интерфейс</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/changelog">Changelog</a></li>
+            <li><a href="/roadmap">Планы</a></li>
+            <li><a href="/team">Команда</a></li>
+            <li><a href="/download">Скачать</a></li>
           </ul>
         </div>
         <div class="footer__contacts">
@@ -126,7 +152,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 AIM — Archaeological Inventory Maker · Волонтёрский проект</p>
+        <p>© 2026 AIM — Archaeological Inventory Maker · Независимый проект</p>
         <p>Разработчик: Марунин Максим</p>
       </div>
     </div>

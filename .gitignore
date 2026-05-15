@@ -1,6 +1,9 @@
 # Claude context
 CLAUDE.md
 
+# Secrets (Timeweb credentials)
+.env
+
 # Dependencies
 node_modules/
 dist/
@@ -23,12 +26,10 @@ Release AIM v0.1 29-03-2026/
 Презентация*.pptx
 *.pptx
 
-# Webpack / build
+# Webpack / build (legacy)
 webpack.*.js
 package.json
 package-lock.json
-style.css
-js/
 
 # Editor
 .editorconfig

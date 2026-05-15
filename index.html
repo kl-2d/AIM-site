@@ -3,9 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AIM — Archaeological Inventory Maker · aim-app.ru</title>
-  <meta name="description" content="AIM — бесплатная программа для создания безошибочной, структурированной археологической описи. Работает без установки, даже с флешки.">
+  <title>AIM — Archaeological Inventory Maker</title>
+  <meta name="description" content="AIM — бесплатная программа для создания безошибочной, структурированной археологической таблицы. Работает без установки, даже с флешки.">
+  <link rel="canonical" href="https://aimarcheo.ru/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="AIM — Archaeological Inventory Maker">
+  <meta property="og:title" content="AIM — Archaeological Inventory Maker">
+  <meta property="og:description" content="AIM — бесплатная программа для создания безошибочной, структурированной археологической таблицы. Работает без установки, даже с флешки.">
+  <meta property="og:url" content="https://aimarcheo.ru/">
+  <meta property="og:image" content="https://aimarcheo.ru/img/logo.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIM — Archaeological Inventory Maker">
+  <meta name="twitter:description" content="AIM — бесплатная программа для создания безошибочной, структурированной археологической таблицы. Работает без установки, даже с флешки.">
+  <meta name="twitter:image" content="https://aimarcheo.ru/img/logo.jpg">
+
+  <!-- Schema.org / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AIM — Archaeological Inventory Maker",
+    "alternateName": "AIM",
+    "operatingSystem": "Windows",
+    "applicationCategory": "BusinessApplication",
+    "softwareVersion": "0.1",
+    "description": "Бесплатная программа для создания безошибочной, структурированной археологической таблицы. Работает без установки, даже с флешки.",
+    "url": "https://aimarcheo.ru/",
+    "downloadUrl": "https://github.com/Ahka2004/AIM/archive/refs/heads/main.zip",
+    "image": "https://aimarcheo.ru/img/logo.jpg",
+    "inLanguage": "ru",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "RUB"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Марунин Максим",
+      "email": "Ahka2004@yandex.ru"
+    }
+  }
+  </script>
+
   <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -16,14 +62,15 @@
 
   <nav class="nav">
     <div class="container nav__inner">
-      <a href="index.html" class="nav__logo">[AIM]</a>
+      <a href="/" class="nav__logo">[AIM]</a>
       <ul class="nav__links">
-        <li><a href="features.html">Возможности</a></li>
-        <li><a href="screenshots.html">Интерфейс</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="changelog.html">Changelog</a></li>
-        <li><a href="roadmap.html">Планы</a></li>
-        <li><a href="download.html" class="btn btn--sm">Скачать</a></li>
+        <li><a href="/download" class="btn btn--sm btn--cta">Скачать</a></li>
+        <li><a href="/features">Возможности</a></li>
+        <li><a href="/screenshots">Интерфейс</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/roadmap">Планы</a></li>
+        <li><a href="/team">Команда</a></li>
       </ul>
       <button class="nav__burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -32,14 +79,15 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero__bg"></div>
+    <img src="img/made-by-humans.png" alt="Made by Humans" class="hero__badge">
     <div class="container hero__inner">
-      <img src="img/logo.jpg" alt="AIM логотип" class="hero__logo">
+      <img src="img/hero-logo.png" alt="AIM логотип" class="hero__logo">
       <h1 class="hero__title">[AIM]</h1>
       <p class="hero__sub">Archaeological Inventory Maker</p>
-      <p class="hero__desc">Находки, таблицы, обмеры, списки, камеральные записи —<br>безошибочная, структурированная, единообразная опись</p>
+      <p class="hero__desc">Находки, таблицы, обмеры, списки, камеральные записи —<br>безошибочная, структурированная, единообразная археологическая таблица</p>
       <div class="hero__actions">
-        <a href="download.html" class="btn btn--primary">Скачать v0.1</a>
-        <a href="features.html" class="btn btn--outline">Узнать больше</a>
+        <a href="/download" class="btn btn--cta">Скачать v0.1</a>
+        <a href="/features" class="btn btn--outline">Узнать больше</a>
       </div>
       <p class="hero__version">Версия 0.1 · 29 марта 2026 · Windows · Бесплатно</p>
     </div>
@@ -51,10 +99,10 @@
       <div class="about__grid">
         <div class="about__text">
           <h2 class="section__title">Что такое AIM?</h2>
-          <p>AIM — редактор описи находок в виде готового решения, учитывающего особенности составления археологических описей. Программа создаёт таблицу с контролем записей и учётом ошибок, исключая ошибки оператора.</p>
+          <p>AIM — это редактор археологической таблицы с контролем и учётом записей в виде готового решения.</p>
           <p>Минимальный порог входа — не нужно ничего осваивать. Запускается мгновенно без установки, работает даже с флешки прямо на раскопе.</p>
-          <p>Волонтёрский проект, распространяется как freeware и рассчитан на широкое применение среди всех заинтересованных пользователей.</p>
-          <a href="features.html" class="btn btn--outline" style="margin-top:8px;">Все возможности →</a>
+          <p>Независимый проект, действующий в интересах широкого круга пользователей. Распространяется как freeware.</p>
+          <a href="/features" class="btn btn--outline" style="margin-top:8px;">Все возможности →</a>
         </div>
         <div class="about__stats">
           <div class="stat">
@@ -74,6 +122,18 @@
     </div>
   </section>
 
+  <!-- PLATFORM STRIP -->
+  <section class="platforms">
+    <div class="container">
+      <a href="/download" class="platforms__strip">
+        <span class="platforms__item"><i class="ph ph-desktop"></i> AIM Desktop · Windows <small>(alpha)</small></span>
+        <span class="platforms__divider"></span>
+        <span class="platforms__item"><i class="ph ph-device-mobile"></i> AIM Mobile · Android <small>(alpha)</small></span>
+        <span class="platforms__cta">Скачать <i class="ph ph-arrow-right"></i></span>
+      </a>
+    </div>
+  </section>
+
   <!-- KEY FEATURES -->
   <section class="features section section--dark">
     <div class="container">
@@ -83,7 +143,7 @@
         <div class="feature-card">
           <div class="feature-card__icon"><i class="ph ph-sliders-horizontal"></i></div>
           <h3>Конструктор таблицы</h3>
-          <p>Вы задаёте правила: типы значений, диапазоны чисел, варианты из списка. В опись попадут только заданные значения.</p>
+          <p>Вы задаёте правила: типы значений, диапазоны чисел, варианты из списка. В таблицу попадут только заданные значения.</p>
         </div>
 
         <div class="feature-card">
@@ -100,7 +160,7 @@
 
       </div>
       <div style="text-align:center; margin-top:32px;">
-        <a href="features.html" class="btn btn--primary">Все возможности</a>
+        <a href="/features" class="btn btn--primary">Все возможности</a>
       </div>
     </div>
   </section>
@@ -111,7 +171,7 @@
       <img src="img/logo.jpg" alt="AIM" class="download__logo">
       <h2>Попробуйте AIM прямо сейчас</h2>
       <p>Бесплатно. Без установки. Работает с флешки.</p>
-      <a href="download.html" class="btn btn--primary btn--lg">Скачать v0.1</a>
+      <a href="/download" class="btn btn--cta btn--lg">Скачать v0.1</a>
     </div>
   </section>
 
@@ -121,18 +181,19 @@
         <div class="footer__brand">
           <span class="nav__logo">[AIM]</span>
           <p>Archaeological Inventory Maker</p>
-          <p>Бесплатная программа для создания<br>археологических описей</p>
+          <p>Бесплатная программа для создания<br>археологических таблиц</p>
         </div>
         <div class="footer__nav">
           <h4>Навигация</h4>
           <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="features.html">Возможности</a></li>
-            <li><a href="screenshots.html">Интерфейс</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="changelog.html">Changelog</a></li>
-            <li><a href="roadmap.html">Планы</a></li>
-            <li><a href="download.html">Скачать</a></li>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/features">Возможности</a></li>
+            <li><a href="/screenshots">Интерфейс</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/changelog">Changelog</a></li>
+            <li><a href="/roadmap">Планы</a></li>
+            <li><a href="/team">Команда</a></li>
+            <li><a href="/download">Скачать</a></li>
           </ul>
         </div>
         <div class="footer__contacts">
@@ -147,7 +208,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 AIM — Archaeological Inventory Maker · Волонтёрский проект</p>
+        <p>© 2026 AIM — Archaeological Inventory Maker · Независимый проект</p>
         <p>Разработчик: Марунин Максим</p>
       </div>
     </div>

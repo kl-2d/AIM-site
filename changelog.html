@@ -3,9 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Changelog — AIM · aim-app.ru</title>
-  <meta name="description" content="История версий AIM — что нового в каждом релизе.">
+  <title>Changelog — AIM</title>
+  <meta name="description" content="История версий AIM — что нового в каждом релизе программы для составления археологических таблиц.">
+  <link rel="canonical" href="https://aimarcheo.ru/changelog">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="AIM — Archaeological Inventory Maker">
+  <meta property="og:title" content="Changelog — AIM">
+  <meta property="og:description" content="История версий AIM — что нового в каждом релизе программы для составления археологических таблиц.">
+  <meta property="og:url" content="https://aimarcheo.ru/changelog">
+  <meta property="og:image" content="https://aimarcheo.ru/img/logo.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Changelog — AIM">
+  <meta name="twitter:description" content="История версий AIM — что нового в каждом релизе программы для составления археологических таблиц.">
+  <meta name="twitter:image" content="https://aimarcheo.ru/img/logo.jpg">
   <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -16,14 +33,15 @@
 
   <nav class="nav">
     <div class="container nav__inner">
-      <a href="index.html" class="nav__logo">[AIM]</a>
+      <a href="/" class="nav__logo">[AIM]</a>
       <ul class="nav__links">
-        <li><a href="features.html">Возможности</a></li>
-        <li><a href="screenshots.html">Интерфейс</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="changelog.html" class="nav__active">Changelog</a></li>
-        <li><a href="roadmap.html">Планы</a></li>
-        <li><a href="download.html" class="btn btn--sm">Скачать</a></li>
+        <li><a href="/download" class="btn btn--sm btn--cta">Скачать</a></li>
+        <li><a href="/features">Возможности</a></li>
+        <li><a href="/screenshots">Интерфейс</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/changelog" class="nav__active">Changelog</a></li>
+        <li><a href="/roadmap">Планы</a></li>
+        <li><a href="/team">Команда</a></li>
       </ul>
       <button class="nav__burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -40,33 +58,38 @@
     <div class="container">
       <div class="changelog__list">
 
-        <div class="changelog__item changelog__item--current">
-          <div class="changelog__meta">
-            <span class="changelog__version">v0.1</span>
-            <span class="changelog__date">29 марта 2026</span>
-            <span class="changelog__badge">Текущая версия</span>
+        <details class="changelog__item changelog__item--current" open>
+          <summary class="changelog__head">
+            <div class="changelog__meta">
+              <span class="changelog__version">v0.1</span>
+              <span class="changelog__date">29 марта 2026</span>
+              <span class="changelog__badge">Текущая версия</span>
+            </div>
+            <i class="ph ph-caret-down changelog__chevron" aria-hidden="true"></i>
+          </summary>
+          <div class="changelog__body">
+            <p class="changelog__intro">Первый публичный релиз. Базовый функционал для создания и ведения археологических описей.</p>
+            <ul class="changelog__changes">
+              <li>Конструктор таблицы — задавайте свои правила для каждого поля</li>
+              <li>7 типов данных: текст, целое число, число с индексом, дробное, логическое, дата, список</li>
+              <li>Подсветка ошибочных записей с расшифровкой ошибки</li>
+              <li>Интуитивный фильтр с сохранением и загрузкой</li>
+              <li>Полевое кодирование — расшифровка сокращений (Q → кварц)</li>
+              <li>Импорт данных из CSV</li>
+              <li>Экспорт в CSV и отчёт DOCX</li>
+              <li>Быстрая сводка по отображаемым записям</li>
+              <li>Сессии работы</li>
+              <li>Русский интерфейс</li>
+              <li>Работа без установки, ~60 МБ, поддержка запуска с флешки</li>
+            </ul>
           </div>
-          <p style="color:var(--text-muted); font-size:14px; margin-bottom:16px;">Первый публичный релиз. Базовый функционал для создания и ведения археологических описей.</p>
-          <ul class="changelog__changes">
-            <li>Конструктор таблицы — задавайте свои правила для каждого поля</li>
-            <li>7 типов данных: текст, целое число, число с индексом, дробное, логическое, дата, список</li>
-            <li>Подсветка ошибочных записей с расшифровкой ошибки</li>
-            <li>Интуитивный фильтр с сохранением и загрузкой</li>
-            <li>Полевое кодирование — расшифровка сокращений (Q → кварц)</li>
-            <li>Импорт данных из CSV</li>
-            <li>Экспорт в CSV и отчёт DOCX</li>
-            <li>Быстрая сводка по отображаемым записям</li>
-            <li>Сессии работы</li>
-            <li>Русский интерфейс</li>
-            <li>Работа без установки, ~60 МБ, поддержка запуска с флешки</li>
-          </ul>
-        </div>
+        </details>
 
       </div>
 
       <div style="text-align:center; margin-top:48px;">
         <p style="color:var(--text-muted); margin-bottom:16px;">Следите за обновлениями — следующие версии уже в разработке</p>
-        <a href="roadmap.html" class="btn btn--outline">Посмотреть планы →</a>
+        <a href="/roadmap" class="btn btn--outline">Посмотреть планы →</a>
         <a href="https://github.com/Ahka2004/AIM" target="_blank" class="btn btn--outline" style="margin-left:12px;"><i class="ph ph-github-logo"></i> Репозиторий на GitHub</a>
       </div>
     </div>
@@ -78,18 +101,19 @@
         <div class="footer__brand">
           <span class="nav__logo">[AIM]</span>
           <p>Archaeological Inventory Maker</p>
-          <p>Бесплатная программа для создания<br>археологических описей</p>
+          <p>Бесплатная программа для создания<br>археологических таблиц</p>
         </div>
         <div class="footer__nav">
           <h4>Навигация</h4>
           <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="features.html">Возможности</a></li>
-            <li><a href="screenshots.html">Интерфейс</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="changelog.html">Changelog</a></li>
-            <li><a href="roadmap.html">Планы</a></li>
-            <li><a href="download.html">Скачать</a></li>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/features">Возможности</a></li>
+            <li><a href="/screenshots">Интерфейс</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/changelog">Changelog</a></li>
+            <li><a href="/roadmap">Планы</a></li>
+            <li><a href="/team">Команда</a></li>
+            <li><a href="/download">Скачать</a></li>
           </ul>
         </div>
         <div class="footer__contacts">
@@ -104,7 +128,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 AIM — Archaeological Inventory Maker · Волонтёрский проект</p>
+        <p>© 2026 AIM — Archaeological Inventory Maker · Независимый проект</p>
         <p>Разработчик: Марунин Максим</p>
       </div>
     </div>

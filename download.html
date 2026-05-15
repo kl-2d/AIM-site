@@ -3,9 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Скачать — AIM · aim-app.ru</title>
+  <title>Скачать — AIM</title>
   <meta name="description" content="Скачать AIM бесплатно. Работает без установки на Windows, ~60 МБ.">
+  <link rel="canonical" href="https://aimarcheo.ru/download">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="AIM — Archaeological Inventory Maker">
+  <meta property="og:title" content="Скачать — AIM">
+  <meta property="og:description" content="Скачать AIM бесплатно. Работает без установки на Windows, ~60 МБ.">
+  <meta property="og:url" content="https://aimarcheo.ru/download">
+  <meta property="og:image" content="https://aimarcheo.ru/img/logo.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Скачать — AIM">
+  <meta name="twitter:description" content="Скачать AIM бесплатно. Работает без установки на Windows, ~60 МБ.">
+  <meta name="twitter:image" content="https://aimarcheo.ru/img/logo.jpg">
   <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -16,14 +33,15 @@
 
   <nav class="nav">
     <div class="container nav__inner">
-      <a href="index.html" class="nav__logo">[AIM]</a>
+      <a href="/" class="nav__logo">[AIM]</a>
       <ul class="nav__links">
-        <li><a href="features.html">Возможности</a></li>
-        <li><a href="screenshots.html">Интерфейс</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="changelog.html">Changelog</a></li>
-        <li><a href="roadmap.html">Планы</a></li>
-        <li><a href="download.html" class="btn btn--sm nav__active-btn">Скачать</a></li>
+        <li><a href="/download" class="btn btn--sm btn--cta nav__active-btn">Скачать</a></li>
+        <li><a href="/features">Возможности</a></li>
+        <li><a href="/screenshots">Интерфейс</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/roadmap">Планы</a></li>
+        <li><a href="/team">Команда</a></li>
       </ul>
       <button class="nav__burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -36,40 +54,15 @@
     </div>
   </div>
 
-  <!-- DOWNLOAD BLOCK -->
-  <section class="section">
-    <div class="container">
-      <div class="download-card">
-        <div class="download-card__header">
-          <img src="img/logo.jpg" alt="AIM" class="download-card__logo">
-          <div>
-            <h2>AIM v0.1</h2>
-            <p class="download-card__meta">29 марта 2026 · Windows · ZIP-архив · GitHub</p>
-          </div>
-        </div>
-        <ul class="download-card__features">
-          <li>✓ Не требует установки — просто распакуйте и запустите</li>
-          <li>✓ Работает с флешки на любом рабочем месте</li>
-          <li>✓ Полностью офлайн — интернет не нужен</li>
-          <li>✓ Бесплатно для всех</li>
-        </ul>
-        <a href="https://github.com/Ahka2004/AIM/archive/refs/heads/main.zip" class="btn btn--primary btn--lg" target="_blank">
-          Скачать v0.1 для Windows
-        </a>
-        <p class="download-card__note">Если возникнут вопросы — смотрите <a href="faq.html">FAQ</a></p>
-      </div>
-    </div>
-  </section>
-
   <!-- HOW TO START -->
-  <section class="section section--dark">
+  <section class="section">
     <div class="container">
       <h2 class="section__title section__title--center">Как начать</h2>
       <div class="steps">
         <div class="step">
           <span class="step__num">1</span>
           <h3>Скачайте архив</h3>
-          <p>Нажмите кнопку выше и сохраните RAR-файл в удобное место.</p>
+          <p>Нажмите кнопку выше и сохраните ZIP-файл в удобное место.</p>
         </div>
         <div class="step">
           <span class="step__num">2</span>
@@ -85,11 +78,68 @@
     </div>
   </section>
 
+  <!-- DOWNLOAD BLOCK -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="download-grid">
+
+        <article class="download-card">
+          <header class="download-card__header">
+            <div class="download-card__icon"><i class="ph ph-desktop"></i></div>
+            <div>
+              <h2>AIM Desktop <span class="download-card__badge">alpha</span></h2>
+              <p class="download-card__meta">v0.1 · 29 марта 2026 · Windows · ZIP</p>
+            </div>
+          </header>
+          <button type="button" class="download-card__video js-video-open" data-video="img/videos/desktop-demo.mp4" data-title="AIM Desktop — демонстрация" aria-label="Открыть видео в большом окне">
+            <video src="img/videos/desktop-demo.mp4" autoplay loop muted playsinline preload="metadata" aria-hidden="true"></video>
+            <span class="download-card__video-expand"><i class="ph ph-arrows-out"></i></span>
+          </button>
+          <ul class="download-card__features">
+            <li>✓ Не требует установки — просто распакуйте и запустите</li>
+            <li>✓ Работает с флешки на любом рабочем месте</li>
+            <li>✓ Полностью офлайн — интернет не нужен</li>
+            <li>✓ Бесплатно для всех</li>
+          </ul>
+          <a href="https://github.com/Ahka2004/AIM/archive/refs/heads/main.zip" class="btn btn--cta btn--lg" target="_blank" rel="noopener">
+            <i class="ph ph-download-simple"></i> Для Windows
+          </a>
+          <p class="download-card__note">Если возникнут вопросы — смотрите <a href="/faq">FAQ</a></p>
+        </article>
+
+        <article class="download-card">
+          <header class="download-card__header">
+            <div class="download-card__icon"><i class="ph ph-device-mobile"></i></div>
+            <div>
+              <h2>AIM Mobile <span class="download-card__badge">alpha</span></h2>
+              <p class="download-card__meta">v0.3.0 · 13 мая 2026 · Android · APK</p>
+            </div>
+          </header>
+          <button type="button" class="download-card__video js-video-open" data-video="img/videos/mobile-demo.mp4" data-title="AIM Mobile — демонстрация" aria-label="Открыть видео в большом окне">
+            <video src="img/videos/mobile-demo.mp4" autoplay loop muted playsinline preload="metadata" aria-hidden="true"></video>
+            <span class="download-card__video-expand"><i class="ph ph-arrows-out"></i></span>
+          </button>
+          <ul class="download-card__features">
+            <li>✓ Полевой ввод данных прямо на раскопе</li>
+            <li>✓ Android 8.0 и новее</li>
+            <li>✓ Ранняя версия — приветствуется обратная связь</li>
+            <li>✓ Бесплатно, без рекламы</li>
+          </ul>
+          <a href="https://github.com/kl-2d/aim-mobile-alpha/releases/download/v0.3.0/aim-mobile-alpha-0.3.0.apk" class="btn btn--cta btn--lg" target="_blank" rel="noopener">
+            <i class="ph ph-download-simple"></i> Для Android
+          </a>
+          <p class="download-card__note">Исходники: <a href="https://github.com/kl-2d/aim-mobile-alpha" target="_blank" rel="noopener">github.com/kl-2d/aim-mobile-alpha</a></p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- COLLAB -->
   <section class="section">
     <div class="container">
       <h2 class="section__title section__title--center">Присоединиться к проекту</h2>
-      <p class="section__sub">AIM — волонтёрский проект. Ищем коллаборацию для дальнейшего развития.</p>
+      <p class="section__sub">AIM — независимый проект, действующий в интересах широкого круга пользователей. Ищем коллаборацию для дальнейшего развития.</p>
       <div class="collab__grid">
 
         <div class="collab__card">
@@ -105,7 +155,6 @@
 
         <div class="collab__card">
           <h3>Связаться с нами</h3>
-          <p>Поможем с началом работы, обращайтесь!</p>
           <div class="collab__contacts">
             <a href="mailto:Ahka2004@yandex.ru">✉ Ahka2004@yandex.ru</a>
             <a href="tel:+79522077729">☎ +7 (952) 207-77-29</a>
@@ -113,6 +162,7 @@
             <a href="https://vk.com/club236060907" target="_blank">❖ ВКонтакте</a>
             <a href="https://github.com/Ahka2004/AIM" target="_blank"><i class="ph ph-github-logo"></i> GitHub</a>
           </div>
+          <p class="collab__cta">Поможем с началом работы, обращайтесь!)</p>
         </div>
 
       </div>
@@ -125,18 +175,19 @@
         <div class="footer__brand">
           <span class="nav__logo">[AIM]</span>
           <p>Archaeological Inventory Maker</p>
-          <p>Бесплатная программа для создания<br>археологических описей</p>
+          <p>Бесплатная программа для создания<br>археологических таблиц</p>
         </div>
         <div class="footer__nav">
           <h4>Навигация</h4>
           <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="features.html">Возможности</a></li>
-            <li><a href="screenshots.html">Интерфейс</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="changelog.html">Changelog</a></li>
-            <li><a href="roadmap.html">Планы</a></li>
-            <li><a href="download.html">Скачать</a></li>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/features">Возможности</a></li>
+            <li><a href="/screenshots">Интерфейс</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/changelog">Changelog</a></li>
+            <li><a href="/roadmap">Планы</a></li>
+            <li><a href="/team">Команда</a></li>
+            <li><a href="/download">Скачать</a></li>
           </ul>
         </div>
         <div class="footer__contacts">
@@ -151,11 +202,22 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 AIM — Archaeological Inventory Maker · Волонтёрский проект</p>
+        <p>© 2026 AIM — Archaeological Inventory Maker · Независимый проект</p>
         <p>Разработчик: Марунин Максим</p>
       </div>
     </div>
   </footer>
+
+  <!-- Video lightbox -->
+  <dialog class="video-modal" id="videoModal" aria-label="Просмотр видео">
+    <button type="button" class="video-modal__close js-video-close" aria-label="Закрыть">
+      <i class="ph ph-x"></i>
+    </button>
+    <div class="video-modal__inner">
+      <h3 class="video-modal__title"></h3>
+      <video class="video-modal__video" controls playsinline></video>
+    </div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>

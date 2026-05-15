@@ -1,5 +1,5 @@
-# www.robotstxt.org/
-
-# Allow crawling of all content
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /404
+
+Sitemap: https://aimarcheo.ru/sitemap.xml
