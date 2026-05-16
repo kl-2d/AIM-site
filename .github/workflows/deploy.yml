@@ -1,0 +1,70 @@
+name: Deploy to Timeweb
+
+# Manual trigger only (UI button + `gh workflow run deploy.yml`).
+# Runner на GitHub имеет нормальный DNS до Timeweb даже когда
+# у локального провайдера vh410.timeweb.ru не резолвится.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-run (без заливки, для проверки)"
+        type: boolean
+        default: true
+      delete:
+        description: "Удалять на сервере то, чего нет в репо"
+        type: boolean
+        default: false
+
+jobs:
+  deploy:
+    name: rsync to Timeweb
+    runs-on: ubuntu-latest
+    concurrency:
+      # одновременно один деплой, чтобы не было гонок
+      group: deploy-timeweb
+      cancel-in-progress: false
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install rsync + sshpass
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq rsync sshpass
+
+      - name: Generate .env from secrets
+        env:
+          TIMEWEB_HOST: ${{ secrets.TIMEWEB_HOST }}
+          TIMEWEB_USER: ${{ secrets.TIMEWEB_USER }}
+          TIMEWEB_PASS: ${{ secrets.TIMEWEB_PASS }}
+          TIMEWEB_REMOTE_DIR: ${{ secrets.TIMEWEB_REMOTE_DIR }}
+        run: |
+          if [ -z "$TIMEWEB_HOST" ] || [ -z "$TIMEWEB_USER" ] || [ -z "$TIMEWEB_PASS" ] || [ -z "$TIMEWEB_REMOTE_DIR" ]; then
+            echo "::error::One or more required secrets are missing (TIMEWEB_HOST/USER/PASS/REMOTE_DIR)."
+            exit 1
+          fi
+          cat > .env <<EOF
+          TIMEWEB_HOST=$TIMEWEB_HOST
+          TIMEWEB_USER=$TIMEWEB_USER
+          TIMEWEB_PASS=$TIMEWEB_PASS
+          TIMEWEB_REMOTE_DIR=$TIMEWEB_REMOTE_DIR
+          EOF
+          chmod 600 .env
+
+      - name: Show plan
+        run: |
+          echo "Mode:    ${{ inputs.dry_run && 'DRY-RUN (проверка)' || 'REAL DEPLOY' }}"
+          echo "Delete:  ${{ inputs.delete }}"
+          echo "Commit:  ${{ github.sha }}"
+          echo "Trigger: ${{ github.actor }}"
+
+      - name: Run deploy_timeweb.py
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ "${{ inputs.delete }}"  = "true" ]; then ARGS="$ARGS --delete";  fi
+          python3 deploy_timeweb.py $ARGS
+
+      - name: Cleanup .env
+        if: always()
+        run: rm -f .env
