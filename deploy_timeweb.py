@@ -23,10 +23,12 @@ ENV_FILE = os.path.join(SCRIPT_DIR, ".env")
 IGNORE_LIST = [
     # git/служебное
     ".git", ".gitignore", ".gitattributes", ".editorconfig",
-    # claude/IDE
-    "CLAUDE.md", ".idea", ".vscode",
-    # деплой (только корневые — на сервер не нужны)
-    "/.env", "/.env.example", "/deploy_timeweb.py",
+    # GitHub Actions (CI/CD, на проде не нужно)
+    "/.github",
+    # claude/IDE — локальные данные агента, могут содержать секреты/transcripts
+    "CLAUDE.md", ".claude", ".idea", ".vscode",
+    # деплой-инфра (на сервер не выкладываем)
+    "/.env", "/.env.example", "/deploy_timeweb.py", "/scripts",
     # node/сборка
     "node_modules", "/package.json", "/package-lock.json",
     "/webpack.common.js", "/webpack.config.dev.js", "/webpack.config.prod.js",
